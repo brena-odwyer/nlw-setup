@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   /* Essa propriedade border-box desconsidera o tamanho das caixinhas dos elementos individuais e vai sempre considerar o que você coloca */
+}
+
+body {
+  background-color: #09090a;
+  color: white;
+   /* Centraliza o logo:
+  display: grid;
+  place-items: center; */
+
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+    /* Pega o que está dentro do cabeçalho dentro do body no HTML na tag <header> faz com que a disposição seja flex alinhada ao centro */
+  justify-content: space-between;
+  /* significa que vai pegar toda a largura do header e vai justificar o conteúdo, colocando espaço entre os elementos */
+  padding: 48px;
+    /* Com um valor só coloca pra cima, baixo, esquerda e direita. */
+  position: fixed;
+  width: 100%;
+  
+}
+
+button {
+  padding: 16px 24px;
+    /* Esse padding é 16 em cima e em baixo
+  24 nas laterais */
+  border-radius: 8px;
+   /* arredondamento de borda */
+  border: 1px solid #8b5cf6;
+    /* A bordar tem 1 pixel, é sólida e é roxinha */
+  background-color: transparent;
+  color: white;
+  /* white é a cor da letra */
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+ /* Display fala da disposição dos elementos, dentro do button temos dois elementos o + que é uma imagem e está em assests e a parte escrita "Registrar o meu dia" que está no HTML. O flex tira o display padrão que é inline. 
+  O aling-center só funciona se temos o flex e aí fica alinhado ao centro
+  O gap coloca espaço entre os elementos então entre o + e o "registre meu dia"*/
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+   /* essas são as especificações da fonte do "registre meu dia" */
+}
+
+#form-habits {
+  display: flex;
+
+  padding: 182px 48px 48px;
+  width: fit-content;
+}
+
+.habits {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+
+  font-family: 'Roboto Mono';
+  font-size: 20px;
+  line-height: 125%;
+
+  color: #A1A1AA;
+
+  text-align: center;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  /* Se refere ao input no HTML, como temos um só input não tem problema, mas se tivessemos vários ia ter que dar aquele nominho. */
+  width: 64px;
+  height: 64px;
+/* Largura e altura */
+  border: 2px solid #27272A;
+  border-radius: 8px;
+  /* Esse tipo de input precisa tirar a aparência padrão dele pra pegar esse tipo de coisa como borda, aí colocamos o appeareance no começo e o webkit pra pegar em todos os navegadores. */
+  background: #18181B;
+}
+
+/* pseudo-selector */
+input:checked {
+  background: #8B5CF6;
+  border: 2px solid #A78BFA;
+}
+
+@media (max-width: 570px) {
+  button div {
+    display: none;
+  }
+  /* Quando a tela for menor que 570px, um celular, por exemplo, a frase escrita "registre meu dia" não vai aparecer, vai ficar só o + */
+}
+
+
+/* Anotações:
+# CSS
+Cascading Style Sheets
+Propriedades: { valores }
+Cascading porque se você faz assim vai ficar o último valor declarado:
+body {
+  background-color: #09090A;
+  color: white;
+}
+
+h1 {
+  color: blue
+}
+
+p {
+  color: red;
+}
+Ou seja, o que estiver em p vai ficar vermelho e em h1 azul, mesmo que no body esteja ali especificando branco.
+
+SVG é uma tag semelhante ao HTML, ambos filhos do XML. O SVG tem o objetivo de criar imagens através de texto.
+
+O Display no CSS é como a visualização vai ser e o que está dentro do body é o svg.
+
+A heigh: 100vp pega toda a altura que está sendo vizualizada, o 100 significa que é 100% da tela, então o svg fica no centro da tela.
+
+* significa selecione todos os elementos HTML e aí o margin, pegue os espaços e o 0 tira os espaços e por isso a barra lateral de rolagem some.
+
+*/
+
+/* 
+
+## Declaration
+
+    Pedaço de código que irá ditar as propriedades e valores a serem aplicadas a um elemento HTML
+    
+- Como escrevemos ?
+```css
+body {
+  background: black;
+	/* color: green; Essa linha será ignorada 
+```
+
+## Cascading
+    Quando há 2 (ou mais) declarações a última será mais relevante
+    
+
+```css
+body {
+  background: red;
+}
+
+body {
+  background: blue;
+}
+Nesse caso será blue
+
+## Specificity
+    
+    Cada seletor tem um peso e a soma dos pesos, será levada em conta para que determinada declaração seja mais específica
+    
+#id {
+  /* peso 100 
+}
+
+.class {
+  /* peso 10 
+}
+
+element {
+  /* peso 1 
+}
+
+```
+
+> *A cascata perde prioridade e é priorizada a especificidade da declaração*
+## Box Model
+
+    Todos os elementos HTML serão considerados uma caixa, assim como uma caixa de papelão
+    
+- **Caixas possuem determinadas propriedades**
+    
+    Conteúdo, Largura, Altura, Borda, Preenchimento (espaço interno), Espaçamento (espaço externo)
+*/

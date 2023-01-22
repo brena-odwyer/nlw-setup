@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- As linhas do 4 ao 6 são a fonte Inter copiada co fonts.google de acordo com o projeto que estava no Figma -->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habits</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.svg" alt="Logomarca do aplicativo Habits" />
+
+      <button>
+        <img src="./assets/plus.svg" alt="ícone sinal de mais roxo" />
+        <div>
+        Registrar o meu dia
+        </div>
+      </button>
+    </header>
+
+    <!-- Os inputs geralmente ficam dentro da tag form 
+        Esse class pode ser chamado pelo nome lá no css-->
+    <!-- input é o que a pessoa usuária faz, ela pode escrever por exemplo, mas no checkbox ela marca e desmarca.
+      Esse checkbox é o quadradinho de marcar. -->
+    <form id="form-habits">
+      <div class="habits">
+        <div class="habit" data-name="run">🏃🏽‍♂️</div>
+        <div class="habit" data-name="water">💧</div>
+        <div class="habit" date-name="food">🍎</div>
+        <div class="habit" date-name="journal">📝</div>
+        <div class="habit" date-name="takePills">💊</div>
+      </div>
+
+      <div class="days"></div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
+    <!-- é a biblioteca da nwl do rocketseat -->
+    <script src="./script.js"></script>
+    <!-- Atributo "src" é de onde vem o arquivo -->
+    <!-- Importando o arquivo js -->
+
+  </body>
+</html>
+
+<!-- 
+    # HTML
+
+## O que é HTML?
+
+- Estruturar textos, criar links, imagens, vídeo, etc ...
+- Hypertext Markup Language
+    
+    Linguagem de marcação de texto
+---
+
+## Hypertext
+
+- Hipertexto
+- Texto que contém links
+---
+
+## Markup
+
+- Marcação do texto
+- Elemento HTML ou **`tag`**
+    
+    Existem inúmeras tags e cada uma deles irá servir para um determinado propósito. Ex.: imagem, texto grande, link, parágrafo, etc...
+---
+
+## Sintaxe de uma tag
+Como escrevemos tags HTML?
+
+```html
+<p>conteúdo</p>
+
+## Atributos
+Adicionam informações e/ou configurações à uma tag
+
+Como escrevemos atributos?
+<a href="https://rocketseat.com.br">Ver site</a>
+<img src="image.jpg" />
+   -->
